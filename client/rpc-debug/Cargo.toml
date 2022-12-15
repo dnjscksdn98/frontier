@@ -20,14 +20,14 @@ fc-rpc-core-types = { path = "../rpc-core-types" }
 fp-rpc-debug = { path = "../../primitives/rpc-debug" }
 
 # Substrate
-sc-client-api = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.33" }
-sc-utils = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.33" }
-sp-api = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.33" }
-sp-block-builder = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.33" }
-sp-blockchain = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.33" }
-sp-core = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.33" }
-sp-io = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.33" }
-sp-runtime = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.33" }
+sc-client-api = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32" }
+sc-utils = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32" }
+sp-api = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32" }
+sp-block-builder = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32" }
+sp-blockchain = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32" }
+sp-core = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32" }
+sp-io = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32" }
+sp-runtime = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32" }
 
 # Frontier
 ethereum = { version = "0.14.0", default-features = false, features = [ "with-codec" ] }

@@ -15,9 +15,9 @@ fp-evm-tracing-events = { path = "../rpc-evm-tracing-events", default-features =
 
 # Substrate
 codec = { package = "parity-scale-codec", version = "3.0.0", default-features = false }
-sp-externalities = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.33", default-features = false }
-sp-runtime-interface = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.33", default-features = false }
-sp-std = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.33", default-features = false }
+sp-externalities = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32", default-features = false }
+sp-runtime-interface = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32", default-features = false }
+sp-std = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32", default-features = false }
 
 [features]
 default = [ "std" ]
