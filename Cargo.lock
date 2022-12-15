@@ -1632,6 +1632,25 @@ dependencies = [
 ]
 
 [[package]]
+name = "evm-tracer"
+version = "0.1.0"
+dependencies = [
+ "ethereum-types",
+ "evm",
+ "evm-gasometer",
+ "evm-runtime",
+ "fp-evm 3.0.0-dev (git+https://github.com/dnjscksdn98/frontier?branch=polkadot-v0.9.32)",
+ "fp-evm-tracing-events",
+ "fp-ext",
+ "pallet-evm 6.0.0-dev (git+https://github.com/dnjscksdn98/frontier?branch=polkadot-v0.9.32)",
+ "parity-scale-codec",
+ "sp-core",
+ "sp-io",
+ "sp-runtime",
+ "sp-std",
+]
+
+[[package]]
 name = "exit-future"
 version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1756,7 +1775,7 @@ dependencies = [
  "fc-db",
  "fc-rpc-core",
  "fp-ethereum",
- "fp-evm",
+ "fp-evm 3.0.0-dev",
  "fp-rpc",
  "fp-storage",
  "futures",
@@ -1952,7 +1971,7 @@ version = "1.0.0-dev"
 dependencies = [
  "ethereum",
  "ethereum-types",
- "fp-evm",
+ "fp-evm 3.0.0-dev",
  "frame-support",
  "num_enum",
  "parity-scale-codec",
@@ -1963,6 +1982,19 @@ dependencies = [
 [[package]]
 name = "fp-evm"
 version = "3.0.0-dev"
+dependencies = [
+ "evm",
+ "frame-support",
+ "parity-scale-codec",
+ "serde",
+ "sp-core",
+ "sp-std",
+]
+
+[[package]]
+name = "fp-evm"
+version = "3.0.0-dev"
+source = "git+https://github.com/dnjscksdn98/frontier?branch=polkadot-v0.9.32#95b4e6f008300bb20b6271fd8c480612d5f9791f"
 dependencies = [
  "evm",
  "frame-support",
@@ -2004,7 +2036,7 @@ version = "3.0.0-dev"
 dependencies = [
  "ethereum",
  "ethereum-types",
- "fp-evm",
+ "fp-evm 3.0.0-dev",
  "parity-scale-codec",
  "scale-info",
  "sp-api",
@@ -2298,7 +2330,7 @@ dependencies = [
  "fc-rpc-core",
  "fp-consensus",
  "fp-dynamic-fee",
- "fp-evm",
+ "fp-evm 3.0.0-dev",
  "fp-rpc",
  "fp-storage",
  "frame-benchmarking",
@@ -2358,7 +2390,7 @@ dependencies = [
  "pallet-base-fee",
  "pallet-dynamic-fee",
  "pallet-ethereum",
- "pallet-evm",
+ "pallet-evm 6.0.0-dev",
  "pallet-evm-chain-id",
  "pallet-evm-precompile-modexp",
  "pallet-evm-precompile-sha3fips",
@@ -4371,7 +4403,7 @@ dependencies = [
 name = "pallet-base-fee"
 version = "1.0.0"
 dependencies = [
- "fp-evm",
+ "fp-evm 3.0.0-dev",
  "frame-support",
  "frame-system",
  "parity-scale-codec",
@@ -4388,7 +4420,7 @@ version = "4.0.0-dev"
 dependencies = [
  "async-trait",
  "fp-dynamic-fee",
- "fp-evm",
+ "fp-evm 3.0.0-dev",
  "frame-support",
  "frame-system",
  "pallet-timestamp",
@@ -4411,7 +4443,7 @@ dependencies = [
  "evm",
  "fp-consensus",
  "fp-ethereum",
- "fp-evm",
+ "fp-evm 3.0.0-dev",
  "fp-rpc",
  "fp-self-contained",
  "fp-storage",
@@ -4420,7 +4452,7 @@ dependencies = [
  "hex",
  "libsecp256k1",
  "pallet-balances",
- "pallet-evm",
+ "pallet-evm 6.0.0-dev",
  "pallet-timestamp",
  "parity-scale-codec",
  "rlp",
@@ -4438,13 +4470,38 @@ version = "6.0.0-dev"
 dependencies = [
  "environmental",
  "evm",
- "fp-evm",
+ "fp-evm 3.0.0-dev",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
  "hex",
  "log",
  "pallet-balances",
+ "pallet-timestamp",
+ "parity-scale-codec",
+ "primitive-types",
+ "rlp",
+ "scale-info",
+ "serde",
+ "sp-core",
+ "sp-io",
+ "sp-runtime",
+ "sp-std",
+]
+
+[[package]]
+name = "pallet-evm"
+version = "6.0.0-dev"
+source = "git+https://github.com/dnjscksdn98/frontier?branch=polkadot-v0.9.32#95b4e6f008300bb20b6271fd8c480612d5f9791f"
+dependencies = [
+ "environmental",
+ "evm",
+ "fp-evm 3.0.0-dev (git+https://github.com/dnjscksdn98/frontier?branch=polkadot-v0.9.32)",
+ "frame-benchmarking",
+ "frame-support",
+ "frame-system",
+ "hex",
+ "log",
  "pallet-timestamp",
  "parity-scale-codec",
  "primitive-types",
@@ -4472,7 +4529,7 @@ dependencies = [
 name = "pallet-evm-precompile-blake2"
 version = "2.0.0-dev"
 dependencies = [
- "fp-evm",
+ "fp-evm 3.0.0-dev",
  "pallet-evm-test-vector-support",
 ]
 
@@ -4480,7 +4537,7 @@ dependencies = [
 name = "pallet-evm-precompile-bn128"
 version = "2.0.0-dev"
 dependencies = [
- "fp-evm",
+ "fp-evm 3.0.0-dev",
  "pallet-evm-test-vector-support",
  "sp-core",
  "substrate-bn",
@@ -4491,18 +4548,18 @@ name = "pallet-evm-precompile-curve25519"
 version = "1.0.0-dev"
 dependencies = [
  "curve25519-dalek 4.0.0-pre.1",
- "fp-evm",
+ "fp-evm 3.0.0-dev",
 ]
 
 [[package]]
 name = "pallet-evm-precompile-dispatch"
 version = "2.0.0-dev"
 dependencies = [
- "fp-evm",
+ "fp-evm 3.0.0-dev",
  "frame-support",
  "frame-system",
  "pallet-balances",
- "pallet-evm",
+ "pallet-evm 6.0.0-dev",
  "pallet-timestamp",
  "pallet-utility",
  "parity-scale-codec",
@@ -4518,14 +4575,14 @@ name = "pallet-evm-precompile-ed25519"
 version = "2.0.0-dev"
 dependencies = [
  "ed25519-dalek",
- "fp-evm",
+ "fp-evm 3.0.0-dev",
 ]
 
 [[package]]
 name = "pallet-evm-precompile-modexp"
 version = "2.0.0-dev"
 dependencies = [
- "fp-evm",
+ "fp-evm 3.0.0-dev",
  "hex",
  "num",
  "pallet-evm-test-vector-support",
@@ -4535,7 +4592,7 @@ dependencies = [
 name = "pallet-evm-precompile-sha3fips"
 version = "2.0.0-dev"
 dependencies = [
- "fp-evm",
+ "fp-evm 3.0.0-dev",
  "tiny-keccak",
 ]
 
@@ -4543,7 +4600,7 @@ dependencies = [
 name = "pallet-evm-precompile-simple"
 version = "2.0.0-dev"
 dependencies = [
- "fp-evm",
+ "fp-evm 3.0.0-dev",
  "pallet-evm-test-vector-support",
  "ripemd",
  "sp-io",
@@ -4554,7 +4611,7 @@ name = "pallet-evm-test-vector-support"
 version = "1.0.0-dev"
 dependencies = [
  "evm",
- "fp-evm",
+ "fp-evm 3.0.0-dev",
  "hex",
  "serde",
  "serde_json",
@@ -4591,7 +4648,7 @@ dependencies = [
  "frame-benchmarking",
  "frame-support",
  "frame-system",
- "pallet-evm",
+ "pallet-evm 6.0.0-dev",
  "parity-scale-codec",
  "scale-info",
  "sp-core",
