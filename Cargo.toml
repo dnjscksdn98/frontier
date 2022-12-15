@@ -20,6 +20,7 @@ members = [
 	"client/db",
 	"client/mapping-sync",
 	"client/evm-tracing",
+	"client/rpc-core-types",
 	"primitives/consensus",
 	"primitives/dynamic-fee",
 	"primitives/evm",
