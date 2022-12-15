@@ -23,6 +23,7 @@ members = [
 	"client/rpc-core-types",
 	"client/rpc-core-trace",
 	"client/rpc-core-debug",
+	"client/rpc-core-txpool",
 	"primitives/consensus",
 	"primitives/dynamic-fee",
 	"primitives/evm",
