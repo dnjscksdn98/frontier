@@ -21,6 +21,7 @@ members = [
 	"client/mapping-sync",
 	"client/evm-tracing",
 	"client/rpc-core-types",
+	"client/rpc-core-trace",
 	"primitives/consensus",
 	"primitives/dynamic-fee",
 	"primitives/evm",
