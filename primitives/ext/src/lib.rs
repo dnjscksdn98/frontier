@@ -28,7 +28,7 @@ use sp_runtime_interface::runtime_interface;
 use codec::Decode;
 use sp_std::vec::Vec;
 
-use fp_evm_tracing_events::{Event, EvmEvent, GasometerEvent, RuntimeEvent, StepEventFilter};
+use fp_rpc_evm_tracing_events::{Event, EvmEvent, GasometerEvent, RuntimeEvent, StepEventFilter};
 
 #[runtime_interface]
 pub trait MoonbeamExt {
@@ -71,7 +71,7 @@ pub trait MoonbeamExt {
 	/// content, as cloning the entire data is expensive and most of the time
 	/// not necessary.
 	fn step_event_filter(&self) -> StepEventFilter {
-		fp_evm_tracing_events::step_event_filter().unwrap_or_default()
+		fp_rpc_evm_tracing_events::step_event_filter().unwrap_or_default()
 	}
 
 	/// An event to create a new CallList (currently a new transaction when tracing a block).
