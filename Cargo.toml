@@ -25,6 +25,7 @@ members = [
 	"primitives/rpc",
 	"primitives/self-contained",
 	"primitives/rpc-evm-tracing-events",
+	"primitives/ext",
 	"template/node",
 	"template/runtime",
 ]
