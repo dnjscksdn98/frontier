@@ -15,6 +15,7 @@ members = [
 	"frame/evm/precompile/dispatch",
 	"frame/evm/precompile/curve25519",
 	"client/consensus",
+	"client/rpc-txpool",
 	"client/rpc-debug",
 	"client/rpc-trace",
 	"client/rpc-core",

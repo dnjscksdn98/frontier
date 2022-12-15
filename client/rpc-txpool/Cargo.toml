@@ -1,0 +1,31 @@
+[package]
+name = "fc-rpc-txpool"
+authors = [ "PureStake" ]
+edition = "2021"
+homepage = "https://moonbeam.network"
+license = "GPL-3.0-only"
+repository = "https://github.com/PureStake/moonbeam/"
+version = "0.6.0"
+
+[dependencies]
+jsonrpsee = { version = "0.15.0", default-features = false, features = [ "macros", "server" ] }
+rlp = "0.5"
+serde = { version = "1.0", features = [ "derive" ] }
+sha3 = "0.10"
+
+fc-rpc-core-txpool = { path = "../rpc-core-txpool" }
+fp-rpc-txpool = { path = "../../primitives/rpc-txpool" }
+
+# Substrate
+frame-system = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32" }
+sc-transaction-pool = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32" }
+sc-transaction-pool-api = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32" }
+sp-api = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32" }
+sp-blockchain = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32" }
+sp-io = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32" }
+sp-runtime = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32" }
+sp-std = { git = "https://github.com/dnjscksdn98/substrate", branch = "polkadot-v0.9.32" }
+
+# Frontier
+ethereum-types = "0.14"
+fc-rpc = { path = "../rpc", features = [ "rpc_binary_search_estimate" ] }
